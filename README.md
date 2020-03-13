@@ -6,19 +6,22 @@ solve linear program problem by  simplex algorithm
 ##### 一.约束的规范化
 
 线性规划的约束的标准形式定义为：
-$$
-maxmize \sum_{j=1}^nc_jx_j\\
-\sum_{j=1}^na_{ij}x_j<=b_i\ \ for\ i=1,2,..,m\\
-x_j>=0\ \ for\ j=1,,,,n
-$$
+
+maxmize:
+  (c1*x1+...cn*xn)
+constraints:
+  a11*x1+...+a1n*xn<=b1
+  .
+  .
+  .
+  am1*x1+...+amn*xn<=bm
 
 
 将线性规划的约束变为标准形式：
-$$
-缺少非负约束的变量x_j的处理:
-x_j=x_{j1}-x_{j2},x_{j1},x_{j2}>0\\
-对于等式约束\sum_{j=1}^na_{ij}x_j=b_i的处理：\sum_{j=1}^na_{ij}x_j<=b_i，-\sum_{j=1}^na_{ij}x_j<=-b_i\\
-$$
+  缺少非负约束的变量xj的处理:
+xj=xj1-xj2 , xj1,xj2>0
+对于等式约束a11*x1+...+a1n*xn==b1的处理：a11*x1+...+a1n*xn<=b1 和 -(a11*x1+...+a1n*xn)<=-b1
+
 
 ##### 二.输入数据格式
 
